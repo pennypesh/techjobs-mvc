@@ -28,15 +28,30 @@
 
         <p>
             <label for="searchTerm">Keyword:</label>
-            <input type="text" name="searchTerm" id="searchTerm" />
+            <input type="text" name="searchTerm" id="searchTerm"/>
         </p>
 
-        <input type="submit" value="Search" />
+        <input type="submit" value="Search"/>
     </form>
 
-    <hr />
+    <hr/>
 
     <!-- TODO #2 - Loop over jobs map to display all job fields -->
+    <h2>View All</h2>
+
+<!--    Loop through arraylist-->
+    <span th:each="hashmap : ${results}">
+        <!--             Loop throgh the hashmap-->
+         <table class="job-listing">
+            <tr  th:each="column : ${hashmap}">
+                <th th:text="${column.key}"></th>
+                <td th:text="${column.value}"></td>
+            </tr>
+
+        </table>
+
+            </span>
+
 
 </div>
 
