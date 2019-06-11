@@ -40,10 +40,10 @@
     <h2>View All</h2>
 
 <!--    Loop through arraylist-->
-    <span th:each="hashmap : ${results}">
+    <span th:each="job : ${jobs}">
         <!--             Loop throgh the hashmap-->
          <table class="job-listing">
-            <tr  th:each="column : ${hashmap}">
+            <tr  th:each="column : ${job}">
                 <th th:text="${column.key}"></th>
                 <td th:text="${column.value}"></td>
             </tr>
